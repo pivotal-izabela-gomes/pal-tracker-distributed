@@ -25,13 +25,17 @@ dependencies {
     compile "org.springframework.cloud:spring-cloud-starter-oauth2"
     compile "io.pivotal.spring.cloud:spring-cloud-sso-connector:$springCloudSsoVersion"
 
+    compile "org.springframework.cloud:spring-cloud-starter-sleuth"
+    compile "org.springframework.cloud:spring-cloud-sleuth-stream"
+    compile "org.springframework.cloud:spring-cloud-starter-stream-rabbit"
+
     testCompile project(":components:test-support")
 }
 
 bootRun.environment([
         "APPLICATION_OAUTH_ENABLED": true,
-        "SECURITY_OAUTH2_CLIENT_CLIENT_ID": "ac2ec913-f9c4-4ed2-8dc7-d00cf9b82a4e",
-        "SECURITY_OAUTH2_CLIENT_CLIENT_SECRET": "0d2ce0b8-e683-4a09-ba7c-32ca34fcb67e",
+        "SECURITY_OAUTH2_CLIENT_CLIENT_ID": "44f627a1-66bb-4c60-85e5-39a63bb1a1e5",
+        "SECURITY_OAUTH2_CLIENT_CLIENT_SECRET": "79e63471-4f05-4c94-92c4-52b6c331ee7c",
         "SECURITY_USER_NAME": "actuator",
         "SECURITY_USER_PASSWORD": "operations4red"
 ])
