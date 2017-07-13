@@ -22,5 +22,16 @@ dependencies {
 
     compile "io.pivotal.spring.cloud:spring-cloud-services-starter-circuit-breaker"
 
+    compile "org.springframework.cloud:spring-cloud-starter-oauth2"
+    compile "io.pivotal.spring.cloud:spring-cloud-sso-connector:$springCloudSsoVersion"
+
     testCompile project(":components:test-support")
 }
+
+bootRun.environment([
+        "APPLICATION_OAUTH_ENABLED": true,
+        "SECURITY_OAUTH2_CLIENT_CLIENT_ID": "ac2ec913-f9c4-4ed2-8dc7-d00cf9b82a4e",
+        "SECURITY_OAUTH2_CLIENT_CLIENT_SECRET": "0d2ce0b8-e683-4a09-ba7c-32ca34fcb67e",
+        "SECURITY_USER_NAME": "actuator",
+        "SECURITY_USER_PASSWORD": "operations4red"
+])
