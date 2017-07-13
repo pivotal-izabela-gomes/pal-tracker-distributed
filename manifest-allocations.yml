@@ -1,7 +1,7 @@
 applications:
 - name: tracker-allocations
   path: ./applications/allocations-server/build/libs/allocations-server.jar
-  host: allocations-pal-icg
+  host: allocations-pal-icg-temp
   memory: 1G
   instances: 1
   env:
